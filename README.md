@@ -1,132 +1,158 @@
-# 🏎️ F1 Winner Prediction System
+# AI-Powered Loan Default Risk Prediction and Credit Approval System
 
-A machine learning-based system that predicts whether a Formula 1 driver will finish in the **Top 3 (podium)** using historical race data.
+## Overview
 
----
+This project is a machine learning-based banking risk analytics system designed to predict loan default risk and provide intelligent credit approval recommendations.
 
-## 🚀 Overview
-
-This project uses historical Formula 1 data to build a predictive model that estimates the probability of a driver finishing on the podium. The model is deployed using a Flask API, allowing real-time predictions.
+The system uses real-world Lending Club loan data and applies advanced machine learning techniques to classify borrowers into risk categories.
 
 ---
 
-## 🧠 Features
+## Features
 
-* 📊 Machine Learning model using XGBoost
-* ⚡ Real-time prediction via Flask API
-* 📈 Probability-based output (not just Yes/No)
-* 🧩 Clean data preprocessing and feature engineering
-* 🏁 Podium (Top 3) prediction system
-
----
-
-## 📥 Input Features
-
-The model uses the following inputs:
-
-* Grid Position
-* Driver Average Position (recent performance)
-* Constructor Average Position
+- Loan Default Prediction
+- Credit Risk Scoring
+- Loan Approval Recommendation Engine
+- Risk Categorization (Low / Medium / High Risk)
+- XGBoost-based Machine Learning Model
+- Imbalanced Data Handling using SMOTE
+- Feature Importance Analysis
+- Streamlit Dashboard Integration
+- Real-world Financial Dataset
 
 ---
 
-## 📤 Output
+## Technologies Used
 
-* `top3_prediction` → 1 (Yes) or 0 (No)
-* `probability` → Likelihood of finishing in Top 3
-
----
-
-## 🛠️ Tech Stack
-
-* Python
-* Pandas
-* Scikit-learn
-* XGBoost
-* Flask
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- XGBoost
+- Streamlit
+- Matplotlib
+- Seaborn
+- SHAP
+- Joblib
 
 ---
 
-## ▶️ How to Run Locally
+## Machine Learning Models Used
 
-### 1. Clone the repository
+- Logistic Regression
+- Random Forest Classifier
+- XGBoost Classifier
 
+XGBoost was selected as the final model due to better recall and ROC-AUC performance for detecting risky borrowers.
+
+---
+
+## Dataset
+
+Dataset used:
+Lending Club Loan Dataset
+
+The dataset contains:
+- Loan Amount
+- Interest Rate
+- Annual Income
+- Debt-to-Income Ratio
+- Credit History
+- FICO Scores
+- Employment Length
+- Loan Status
+- and other financial indicators
+
+---
+
+## Project Workflow
+
+1. Data Collection
+2. Data Cleaning and Preprocessing
+3. Feature Selection
+4. Handling Missing Values
+5. Encoding Categorical Variables
+6. Handling Imbalanced Data using SMOTE
+7. Model Training
+8. Model Evaluation
+9. Risk Scoring
+10. Streamlit Dashboard Deployment
+
+---
+
+## Model Evaluation
+
+### Final XGBoost Model Performance
+
+- Accuracy: ~72%
+- Recall for Default Detection: ~50%
+- ROC-AUC Score: ~0.64
+
+The model was optimized to improve default detection recall rather than maximizing raw accuracy, which is more important in banking risk analytics.
+
+---
+
+## Risk Categories
+
+| Risk Score | Category |
+|---|---|
+| 0 - 35 | Low Risk |
+| 35 - 70 | Medium Risk |
+| 70 - 100 | High Risk |
+
+---
+
+## Loan Recommendation Logic
+
+- Low Risk → Approve
+- Medium Risk → Manual Review
+- High Risk → Reject
+
+---
+
+## Folder Structure
+
+```bash
+loan-default-risk-prediction/
+│
+├── data/
+├── notebooks/
+├── models/
+├── app/
+├── visuals/
+├── README.md
+└── requirements.txt
 ```
-git clone https://github.com/YOUR-USERNAME/F1_winner_prediction.git
-cd F1_winner_prediction
-```
 
-### 2. Create virtual environment
+---
 
-```
-python -m venv f1env
-f1env\Scripts\activate   # Windows
-```
+## How to Run
 
-### 3. Install dependencies
+### Install Dependencies
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
-### 4. Run the Flask app
+### Run Streamlit App
 
-```
-python app.py
-```
-
-### 5. Open in browser
-
-```
-http://127.0.0.1:5000
+```bash
+streamlit run app/streamlit_app.py
 ```
 
 ---
 
-## 🧪 API Usage
+## Future Improvements
 
-### Endpoint:
-
-```
-POST /predict
-```
-
-### Example Request:
-
-```json
-{
-  "grid": 2,
-  "driver_avg_pos": 3,
-  "constructor_avg_pos": 2
-}
-```
-
-### Example Response:
-
-```json
-{
-  "top3_prediction": 1,
-  "probability": 0.91
-}
-```
+- Hyperparameter Tuning
+- Advanced Feature Engineering
+- Real-time Risk Monitoring
+- Power BI Dashboard Integration
+- Cloud Deployment
+- API Integration
 
 ---
 
-## 📌 Future Improvements
+## Author
 
-* Driver-based predictions (auto feature extraction)
-* Integration with real-time F1 APIs
-* Interactive frontend dashboard
-* Enhanced feature engineering (qualifying, lap times, etc.)
-
----
-
-## 👨‍💻 Author
-
-**Binil John**
-
----
-
-## 📄 License
-
-This project is for educational purposes.
+Binil John
