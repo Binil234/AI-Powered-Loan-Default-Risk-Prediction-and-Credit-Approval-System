@@ -1,6 +1,7 @@
 # AI-Powered Loan Default Risk Prediction and Credit Approval System
 
 ## Overview
+An end-to-end AI and Business Intelligence project for predicting loan default risk using XGBoost, Streamlit, and Power BI.
 
 This project is a machine learning-based banking risk analytics system designed to predict loan default risk and provide intelligent credit approval recommendations.
 
