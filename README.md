@@ -166,6 +166,26 @@ streamlit run app/streamlit_app.py
 
 ---
 
+# 📸 Project Screenshots
+
+## Streamlit Application
+
+### Home Page
+![Home Page](screenshots/streamlit_home.png)
+
+---
+
+### Risk Prediction
+![Risk Prediction](screenshots/risk_prediction.png)
+
+---
+
+## Power BI Dashboard
+
+![Power BI Dashboard](screenshots/powerbi_dashboard.png)
+
+---
+
 ## Author
 
 Binil John
