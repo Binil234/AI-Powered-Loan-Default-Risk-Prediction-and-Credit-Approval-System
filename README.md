@@ -47,6 +47,20 @@ XGBoost was selected as the final model due to better recall and ROC-AUC perform
 
 ---
 
+## Power BI Dashboard
+
+Developed an interactive Power BI dashboard for loan default risk analytics featuring:
+
+- KPI monitoring for default risk and high-risk borrowers
+- Risk segmentation (Low / Medium / High)
+- Approval recommendation analytics
+- Income vs risk visualization
+- FICO score analysis
+
+Dashboard built using 26K+ loan application records and ML prediction outputs.
+
+---
+
 ## Dataset
 
 Dataset used:
@@ -147,7 +161,6 @@ streamlit run app/streamlit_app.py
 - Hyperparameter Tuning
 - Advanced Feature Engineering
 - Real-time Risk Monitoring
-- Power BI Dashboard Integration
 - Cloud Deployment
 - API Integration
 
